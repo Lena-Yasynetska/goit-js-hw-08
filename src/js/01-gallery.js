@@ -1,8 +1,8 @@
-
 import { galleryItems } from './gallery-items';
 
 const galleryList = document.querySelector('.gallery');
-const galleryMarkup = galleryItems.map(item =>
+
+galleryList.innerHTML = galleryItems.map(item =>
     `<li class="gallery__item">
     <a class="gallery__link" href="${item.original}">
     <img class="gallery__image"
@@ -13,7 +13,6 @@ const galleryMarkup = galleryItems.map(item =>
     </li>`)
     .join('');
 
-galleryList.innerHTML = galleryMarkup;
 galleryList.addEventListener("click", e => {
     e.preventDefault();
     if (e.target.tagName === "IMG") {
