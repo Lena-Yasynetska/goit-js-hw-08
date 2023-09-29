@@ -20,6 +20,6 @@ galleryList.addEventListener("click", e => {
         const lightbox = basicLightbox.create(`<img src="${largeImageSrc}" alt="${e.target.alt}" />`);
         lightbox.show();
     }
-});
+})
 
 console.log(galleryItems);
